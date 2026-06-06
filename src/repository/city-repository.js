@@ -29,6 +29,19 @@ class CityRepository {
         }
     }
 
+    // async deleteAllCities() {
+    //     try {
+    //         await City.destroy({
+    //             where: {},
+    //             truncate: true
+    //         })
+    //         return true;
+    //     } catch (error) {
+    //         console.log("Something went wrong in the repository layer");
+    //         throw { error };
+    //     }
+    // }
+
     async updateCity(cityId, data) {
         try {
             // The below approach also works  but it will not return updated city object
@@ -62,6 +75,20 @@ class CityRepository {
             throw { error };
         }
     }
+
+    // async getCityByName(cityName) {
+    //     try {
+    //         const city = await City.findOne({
+    //             where: {
+    //                 name: cityName
+    //             }
+    //         })
+    //         return city;
+    //     } catch(error) {
+    //         console.log("Something went wrong in the repository layer");
+    //         throw { error };
+    //     }
+    // }
 
     async getAllCities(filter) { // filter is currently not being used but we can use it to filter cities based on certain criteria in the future and it can be empty also 
         try {

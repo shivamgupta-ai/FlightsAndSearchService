@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require("express");  
 const bodyParser = require("body-parser");
 
 
@@ -11,6 +11,8 @@ const db = require("./models/index");
 const setupAndStartServer = async () => {
     //create the express object
     const app = express();
+
+    
 
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true}));
