@@ -12,7 +12,7 @@ const setupAndStartServer = async () => {
     //create the express object
     const app = express();
 
-    
+     
 
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true}));
@@ -24,7 +24,7 @@ const setupAndStartServer = async () => {
         console.log(`Server is running on port ${PORT}`);
         if(process.env.SYNC_DB) {
             db.sequelize.sync({ alter: true });
-        }
+        } 
     });
 }
 
