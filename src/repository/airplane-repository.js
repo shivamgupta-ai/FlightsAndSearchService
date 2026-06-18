@@ -12,4 +12,4 @@ class AirplaneRepository {
     }
 }
 
-module.exports = AirplaneRepository;
+module.exports = AirplaneRepository;    
